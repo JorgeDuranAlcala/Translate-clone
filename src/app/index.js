@@ -7,6 +7,7 @@ const eventHandler = new EventHandler();
 
 function main() {
     eventHandler.sendFormData()
+    eventHandler.renderLanguagesList()
 }
 
 main()

@@ -4,13 +4,15 @@ const tranlateText = require("./translator")
 
 router.post('/', async (req, res) => {
 
-    const { text } = req.body;
+    const { text, to, from } = req.body;
 
-    console.log(text)
-
-    const data = await tranlateText(text);
-
-    res.send({message: 'translated', textTranslated: data})
+    try {
+        const data = await tranlateText(text, to, from);
+        res.send({message: 'translated', textTranslated: data})
+    } catch (error) {
+        console.log(error)
+    }
+    
 })
 
 module.exports = router;

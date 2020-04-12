@@ -6,11 +6,13 @@ export class Traductor {
         this.url = 'http://localhost:4000/';
     }
 
-    async translateText(text) {
+    async translateText(text, to, from) {
         await fetch(this.url, {
             method: "POST",
             body: JSON.stringify({
-                text: text
+                text,
+                to,
+                from
             }),
             headers: { "Content-type": "application/json; charset=UTF-8" }
         })

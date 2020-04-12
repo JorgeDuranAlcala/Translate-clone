@@ -1,7 +1,7 @@
 const translate = require("@vitalets/google-translate-api")
 
-function translateText(text) {
-   const textTranslated = translate(text, { to: 'ko' })
+function translateText(text, to, from) {
+   const textTranslated = translate(text, { from, to })
     .then(res => res)
     .catch(error => console.log(error))
 

@@ -12,11 +12,20 @@
     />
   </head>
   <body>
-      <div class="container-fluid">
+      <div class="container-fluid text-center">
+        <h1 class="text-title my-4">Tranlator Clone</h1>
         <div class="row justify-content-center">
           <div class="col-md-4">
             <div class="card shadow-lg text-center">
-              <h3 class="card-title mt-2">Translator</h3>
+              <div class="card-header">
+                <h3 class="card-title mt-2">Choose a Language</h3>
+                <select 
+                name="languages-list"
+                id="languages-list"
+                class="bg-dark"
+                >
+                </select>
+              </div>
               <div class="card-body">
                 <form id="form">
                     <div class="form-group">
@@ -30,7 +39,12 @@
             </div>
           </div>
           <div class="col-md-4">
-              <div class="card py-4">
+              <div class="card text-center">
+                  <div class="card-header">
+                    <h3 class="card-title mt-2">Choose a Language to translate</h3>
+                    <select name="lang_list" class="bg-dark" id="lang_list">
+                    </select>
+                  </div>
                   <div class="card-body">
                     <div class="tranlated-box">
                       <p id="txtTrans"></p>
