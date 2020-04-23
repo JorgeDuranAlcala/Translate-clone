@@ -17,6 +17,7 @@ export class EventHandler {
                )
         })
     }
+
     
     renderLanguagesList() {
         for (const value in langs) {

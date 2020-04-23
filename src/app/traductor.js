@@ -7,6 +7,8 @@ export class Traductor {
     }
 
     async translateText(text, to, from) {
+        let loading = true;
+        ui.showLoading();
         await fetch(this.url, {
             method: "POST",
             body: JSON.stringify({
@@ -19,8 +21,8 @@ export class Traductor {
         .then(res => res.json())
         .then(res => {
             const { text } = res.textTranslated;
+            ui.dissapearLoading();
             ui.render(text)
-            console.log(res)
         })
         .catch(error => console.log(error))
     }
